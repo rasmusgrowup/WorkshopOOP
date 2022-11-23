@@ -4,7 +4,7 @@ public class Co2Sensor extends Sensor{
 
     private double co2Level;
 
-    Co2Sensor(String name, UUID id, double temperature, double co2Level) {
+    Co2Sensor(String name, UUID id, double co2Level) {
         super(name, id);
         this.co2Level = co2Level;
     }
