@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class Building extends Unit {
 
@@ -7,13 +6,9 @@ public class Building extends Unit {
 
     private List<Actuator> actuators;
 
-    Building(String name, UUID id,
-             List<Sensor> sensors,
-             List<Actuator> actuators) {
-
+    Building(String name, UUID id) {
         super(name, id);
-        this.actuators = actuators;
-        this.sensors = sensors;
+        sensors = new ArrayList();
     }
 
     public List<Sensor> getSensors() {
@@ -28,8 +23,8 @@ public class Building extends Unit {
         sensors.add(name);
     }
 
-    public void addCo2Sensor(Co2Sensor name) {
-        sensors.add(name);
+    public void addCo2Sensor(Co2Sensor sensor) {
+        sensors.add(sensor);
     }
 
     public void removeSensor(Sensor name) {
